@@ -11,6 +11,7 @@ export const quizcontent = [
     intAnswer: "intAnswer",
     advKnowledge: "Fusion of these 3 bones generally occurs between what ages?",
     advAnswer: "intAnswer",
+    enable: true
   },
   {
     key: '01/09/2017',
@@ -21,6 +22,7 @@ export const quizcontent = [
     intAnswer: "intAnswer",
     advKnowledge: "adv Question",
     advAnswer: "intAnswer",
+    enable: true
   }
 
 ]

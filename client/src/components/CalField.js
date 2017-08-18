@@ -1,12 +1,15 @@
 import React from 'react';
 // import { quizcontent } from '../quizcontent';
-const Quiz = () => {
+
+
+const CalField = ({ month }) => {
+
   return (
-    <div>
-      Quiz
+    <div >
+      {month}
     </div>
   )
 
 }
 
-export default Quiz;
+export default CalField;

@@ -1,9 +1,16 @@
 import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import Home from './components/Home';
+import Quiz from './components/Quiz';
+
 
 const App = () => (
-  <p>
-    To get started, edit <code>src/App.js</code> and save to reload.
-  </p>
+  <div>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route path="/:id" component={Quiz} />
+    </Switch>
+  </div>
 );
 
 export default App;

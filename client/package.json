@@ -9,7 +9,8 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "semantic-ui-css": "^2.2.10",
-    "semantic-ui-react": "^0.68.5"
+    "semantic-ui-react": "^0.68.5",
+    "moment": "^2.18.1"
   },
   "proxy": "http://localhost:3001",
   "scripts": {

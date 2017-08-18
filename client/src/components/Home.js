@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { quizcontent } from '../quizcontent';
 const Home = ({}) => {
   return (
     <div>

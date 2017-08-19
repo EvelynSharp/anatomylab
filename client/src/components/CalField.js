@@ -32,7 +32,7 @@ const CalField = ({ history, month, year }) => {
   }
 
   const handleClick = (history, ifView, week) => {
-    if (!ifView) {
+    if (ifView) {
       history.push(`/${week}`)
     }
   }
@@ -45,7 +45,7 @@ const CalField = ({ history, month, year }) => {
         let ifView = visibility(date)
         return (
           <div onClick={ () => handleClick(history, ifView, week ) } key={date} className={ ifView ? 'active' : 'inactive'}>
-            { `Week ${d.format('ww')}  ${d.format('MM-DD-YY')}` }
+            { `Week ${week}  ${d.format('MM-DD-YY')}` }
           </div>
         )
       }) }

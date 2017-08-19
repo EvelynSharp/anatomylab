@@ -23,6 +23,6 @@ export const quizcontent = [
     advKnowledge: "adv Question",
     advAnswer: "intAnswer",
     enable: true
-  }
+  },
 
 ]

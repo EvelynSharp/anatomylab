@@ -5,7 +5,7 @@ import Quiz from './components/Quiz';
 
 
 const App = () => (
-  <div>
+  <div className = 'app'>
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/:id" component={Quiz} />

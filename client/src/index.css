@@ -4,6 +4,49 @@ body {
   font-family: sans-serif;
 }
 
+.app {
+  background: #ECECEC;
+  padding-bottom: 10%;
+}
+
+.home h1 {
+  font-size: 4em;
+  text-align: center;
+  color: #C82C20;
+  padding: 1% 0;
+  border-bottom: 1px solid #ADADAD;
+  background: #FFFFFF;
+}
+
+.home h2 {
+  font-size: 2em;
+  text-align: center;
+  color: #BE2216;
+  padding-top: 0.5%;
+  margin: 0;
+}
+
+.home h3 {
+  font-size: 1.7em;
+  padding: 0.3em 0;
+}
+
 .active {
   text-decoration: underline;
+  color: #33CCCC;
+  cursor: pointer;
+}
+
+.inactive {
+  color: #A2DFDF;
+}
+
+.cal-field {
+  height: 10em;
+  margin: 5% 5%;
+}
+
+.cal-field h5 {
+  margin: 5% 0 7% 0;
+  font-size: 1.3em;
 }

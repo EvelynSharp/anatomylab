@@ -37,8 +37,8 @@ const CalField = ({ history, month, year }) => {
     }
   }
   return (
-    <div >
-      {month}
+    <div className='cal-field'>
+      <h5>{month}</h5>
       { getMondays( month, year ).map( date => {
         let d = moment(date)
         let week = d.format('ww')

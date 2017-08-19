@@ -3,7 +3,7 @@ import quiz2img from './images/quiz2img.jpg';
 
 export const quizcontent = [
   {
-    key: '01/02/2017',
+    key: '01',
     imagesrc: quiz1img,
     genKnowledge: "What side of the body is this bone from?",
     genAnswer: "genAnswer",
@@ -14,7 +14,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '01/09/2017',
+    key: '02',
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -25,7 +25,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '3',
+    key: '03',
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -36,7 +36,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '4',
+    key: '04',
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -47,7 +47,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '5',
+    key: '05',
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -58,7 +58,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '6',
+    key: '06',
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -69,7 +69,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '7',
+    key: '07',
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -80,7 +80,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '8',
+    key: '08',
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -91,7 +91,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '9',
+    key: '09',
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",

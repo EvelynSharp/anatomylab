@@ -1,84 +1,112 @@
 import React from 'react';
-import {Grid, Container, Header, Image, Button} from 'semantic-ui-react';
+import {Container, Grid, Image, Button, Card} from 'semantic-ui-react';
 import {quizcontent} from '../quizcontent';
 
 class Quiz extends React.Component {
 
-  state = { answer: false}
+  state = { genAnswer: false, intAnswer: false, advAnswer: false }
 
-  toggleAnswer = (e) => {
-    this.setState({answer: !this.state.answer})
+  toggleGenAnswer = (e) => {
+    this.setState({ genAnswer: !this.state.genAnswer})
+  }
+
+  toggleIntAnswer = (e) => {
+    this.setState({ intAnswer: !this.state.intAnswer})
+  }
+
+  toggleAdvAnswer = (e) => {
+    this.setState({ advAnswer: !this.state.advAnswer})
   }
 
   showGenAnswer(e) {
-    if(this.state.answer)
+    if(this.state.genAnswer)
     return (
-      <h1>{quizcontent[Number(this.props.match.params.id )].genAnswer}</h1>
+      <h3 style={{color: 'green'}}>{quizcontent[Number(this.props.match.params.id )].genAnswer}</h3>
     )
     else
     return(
-      <h1 style={{visibility: 'hidden'}}>{quizcontent[Number(this.props.match.params.id )].genAnswer}</h1>
+      <h3 style={{visibility: 'hidden'}}>{quizcontent[Number(this.props.match.params.id )].genAnswer}</h3>
     )
   }
 
   showIntAnswer(e) {
-    if(this.state.answer)
+    if(this.state.intAnswer)
     return (
-      <h1>{quizcontent[Number(this.props.match.params.id )].intAnswer}</h1>
+      <h3 style={{color: 'green'}}>{quizcontent[Number(this.props.match.params.id )].intAnswer}</h3>
     )
     else
     return(
-      <h1 style={{visibility: 'hidden'}}>{quizcontent[Number(this.props.match.params.id )].intAnswer}</h1>
+      <h3 style={{visibility: 'hidden'}}>{quizcontent[Number(this.props.match.params.id )].intAnswer}</h3>
     )
   }
 
   showAdvAnswer(e) {
-    if(this.state.answer)
+    if(this.state.advAnswer)
     return (
-      <h1>{quizcontent[Number(this.props.match.params.id )].advAnswer}</h1>
+      <h3 style={{color: 'green'}}>{quizcontent[Number(this.props.match.params.id )].advAnswer}</h3>
     )
     else
     return(
-      <h1 style={{visibility: 'hidden'}}>{quizcontent[Number(this.props.match.params.id )].advAnswer}</h1>
+      <h3 style={{visibility: 'hidden'}}>{quizcontent[Number(this.props.match.params.id )].advAnswer}</h3>
     )
+  }
+
+  backHome = (e) => {
+    this.props.history.push('/')
   }
 
   render(){
     return (
-      <Container>
-        <div>
-          <Header
-            color='red'
-            textAlign='center'
-            style={{fontSize: 50, padding: 25}}
-            >
-            Question of the week
-          </Header>
-        </div>
-        <Grid divided='vertically'>
-          <Grid.Row columns={2}>
-            <Grid.Column>
-              <Image src={quizcontent[Number(this.props.match.params.id )].imagesrc}/>
-            </Grid.Column>
-            <Grid.Column>
-              <h3>Rate your anitomical knowledge</h3>
-              <div>
-                <h4>{quizcontent[Number(this.props.match.params.id )].genKnowledge}</h4>
-                <h4>{this.showGenAnswer()}</h4>
-              </div>
-              <div>
-                <h4>{quizcontent[Number(this.props.match.params.id )].intKnowledge}</h4>
-                <h4>{this.showIntAnswer()}</h4>
-              </div>
-              <div>
-                <h4>{quizcontent[Number(this.props.match.params.id )].advKnowledge}</h4>
-                <h4>{this.showAdvAnswer()}</h4>
-              </div>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      <Button onClick={this.toggleAnswer}>SHOW ANSWERS</Button>
-      </Container>
+        <Container className='question'>
+          <h1>Question of the week</h1>
+          <div className='question-nav'>
+            <h2>{quizcontent[Number(this.props.match.params.id )].key}</h2>
+            <Button
+              onClick={this.backHome}
+              color='red'
+              className='backHome'
+              >
+              HOME
+            </Button>
+          </div>
+          <div className='question-body'>
+            <Grid columns={2} divided='vertically' centered>
+              <Grid.Row>
+                <Grid.Column>
+                  <Image bordered src={quizcontent[Number(this.props.match.params.id )].imagesrc}/>
+                </Grid.Column>
+                <Grid.Column>
+                  <Card.Group itemsPerRow={1}>
+                    <Card>
+                      <h2>General Knowledge</h2>
+                      <h3>{quizcontent[Number(this.props.match.params.id )].genKnowledge}</h3>
+                      {this.showGenAnswer()}
+                      <Button color={'grey'}onClick={this.toggleGenAnswer}>See Answer</Button>
+                    </Card>
+                    <Card>
+                      <h2>Intermediate Knowledge</h2>
+                      <h3>{quizcontent[Number(this.props.match.params.id )].intKnowledge}</h3>
+                      {this.showIntAnswer()}
+                      <Button color={'grey'}onClick={this.toggleIntAnswer}>See Answer</Button>
+                    </Card>
+                    <Card>
+                      <h2>Advanced Knowledge</h2>
+                      <h3>{quizcontent[Number(this.props.match.params.id )].advKnowledge}</h3>
+                      {this.showAdvAnswer()}
+                      <Button color={'grey'}onClick={this.toggleAdvAnswer}>See Answer</Button>
+                    </Card>
+                    <Card>
+                  <div>
+                    <Button>Previous</Button>
+                    <Button>Next</Button>
+                  </div>
+                  </Card>
+                  </Card.Group>
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+          </div>
+        </Container>
     )
   }
 }

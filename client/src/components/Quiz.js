@@ -106,19 +106,19 @@ class Quiz extends React.Component {
                       <h2>General Knowledge</h2>
                       <h3>{quizcontent[Number(this.props.match.params.id )].genKnowledge}</h3>
                       {this.showGenAnswer()}
-                      <Button color={'grey'}onClick={this.toggleGenAnswer}>See Answer</Button>
+                      <Button color={'red'} onClick={this.toggleGenAnswer}>See Answer</Button>
                     </Card>
                     <Card>
                       <h2>Intermediate Knowledge</h2>
                       <h3>{quizcontent[Number(this.props.match.params.id )].intKnowledge}</h3>
                       {this.showIntAnswer()}
-                      <Button color={'grey'}onClick={this.toggleIntAnswer}>See Answer</Button>
+                      <Button color={'red'}onClick={this.toggleIntAnswer}>See Answer</Button>
                     </Card>
                     <Card>
                       <h2>Advanced Knowledge</h2>
                       <h3>{quizcontent[Number(this.props.match.params.id )].advKnowledge}</h3>
                       {this.showAdvAnswer()}
-                      <Button color={'grey'}onClick={this.toggleAdvAnswer}>See Answer</Button>
+                      <Button color={'red'}onClick={this.toggleAdvAnswer}>See Answer</Button>
                     </Card>
                   </Card.Group>
                 </Grid.Column>

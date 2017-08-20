@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Grid, Image, Button, Card} from 'semantic-ui-react';
+import {Container, Grid, Image, Button, Card, Icon} from 'semantic-ui-react';
 import {quizcontent} from '../quizcontent';
 
 class Quiz extends React.Component {
@@ -60,23 +60,48 @@ class Quiz extends React.Component {
         <Container className='question'>
           <h1>Question of the week</h1>
           <div className='question-nav'>
-            <h2>{quizcontent[Number(this.props.match.params.id )].key}</h2>
-            <Button
-              onClick={this.backHome}
-              color='red'
-              className='backHome'
-              >
-              HOME
+            <Button animated color='red'>
+              <Button.Content visible>Prev</Button.Content>
+              <Button.Content hidden>
+                <Icon name='left arrow' />
+              </Button.Content>
+            </Button>
+
+            <div>
+              <h2>{quizcontent[Number(this.props.match.params.id )].key}</h2>
+              <Button
+                onClick={this.backHome}
+                color='red'
+                className='backHome'
+                animated
+                >
+                <Button.Content visible>Home</Button.Content>
+                <Button.Content hidden>
+                  <Icon name='home' size='large'/>
+                </Button.Content>
+              </Button>
+            </div>
+
+            <Button animated color='red'>
+              <Button.Content visible>Next</Button.Content>
+              <Button.Content hidden>
+                <Icon name='right arrow' />
+              </Button.Content>
             </Button>
           </div>
+
           <div className='question-body'>
             <Grid columns={2} divided='vertically' centered>
               <Grid.Row>
                 <Grid.Column>
-                  <Image bordered src={quizcontent[Number(this.props.match.params.id )].imagesrc}/>
+                  <Image
+                    src={quizcontent[Number(this.props.match.params.id )].imagesrc}
+                    style={{maxHeight: 700}}
+                    fluid
+                    />
                 </Grid.Column>
                 <Grid.Column>
-                  <Card.Group itemsPerRow={1}>
+                  <Card.Group itemsPerRow={1} style={{padding: 0}}>
                     <Card>
                       <h2>General Knowledge</h2>
                       <h3>{quizcontent[Number(this.props.match.params.id )].genKnowledge}</h3>
@@ -95,12 +120,6 @@ class Quiz extends React.Component {
                       {this.showAdvAnswer()}
                       <Button color={'grey'}onClick={this.toggleAdvAnswer}>See Answer</Button>
                     </Card>
-                    <Card>
-                  <div>
-                    <Button>Previous</Button>
-                    <Button>Next</Button>
-                  </div>
-                  </Card>
                   </Card.Group>
                 </Grid.Column>
               </Grid.Row>

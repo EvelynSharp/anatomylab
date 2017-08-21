@@ -7,7 +7,11 @@ class Quiz extends React.Component {
   state = { genAnswer: false, intAnswer: false, advAnswer: false }
 
   componentWillMount = () => {
-
+    let quizId = Number(this.props.match.params.id)
+    let curWeek = Number(moment().format('ww'))
+    if ( quizId < curWeek || !quizcontent[quizId-1].enable) {
+      this.props.history.push('/')
+    }
   }
 
   toggleAnswer = (type) => {
@@ -36,7 +40,7 @@ class Quiz extends React.Component {
       if ( curQuizId !== 0 ) {
         this.props.history.push(`/${availQuiz[curQuizId - 1].key }`)
       }
-    } else {
+    } else if (direction === 1) {
       if ( curQuizId < availQuiz.length - 1 ) {
         this.props.history.push(`/${availQuiz[curQuizId + 1].key }`)
       }

@@ -4,7 +4,7 @@ import {quizcontent} from '../quizcontent';
 import moment from 'moment';
 class Quiz extends React.Component {
 
-  state = { genAnswer: false, intAnswer: false, advAnswer: false }
+  state = { genAnswer: false, intAnswer: false, advAnswer: false, pre: true, next: true }
 
   componentWillMount = () => {
     let quizId = Number(this.props.match.params.id)
@@ -13,6 +13,17 @@ class Quiz extends React.Component {
       this.props.history.push('/')
     }
   }
+
+  // componentWillReceiveProps = () => {
+  //   let quizId = Number(this.props.match.params.id)
+  //   let curWeek = Number(moment().format('ww'))
+  //   let availQuiz = quizcontent.filter( quiz => quiz.enable === true && quiz.key >= curWeek);
+  //   let curQuizId;
+  //   availQuiz.map( (q, i) => { if (q.key === quizId) { curQuizId = i } });
+  //   console.log(curQuizId)
+  //   if(curQuizId === 0) { this.setState({ pre: false }) }
+  //   if(curQuizId >= availQuiz.length - 1) { this.setState({ next: false})}
+  // }
 
   toggleAnswer = (type) => {
     this.setState({ [type]: !this.state[type]})
@@ -49,14 +60,14 @@ class Quiz extends React.Component {
 
 
   render(){
-    let { genAnswer, intAnswer, advAnswer } = this.state;
+    let { genAnswer, intAnswer, advAnswer, pre, next } = this.state;
     let quizId = Number(this.props.match.params.id) - 1
     return (
         <div className='question'>
           <h1>Question of the week</h1>
           <h2>{`Week: ${quizId+1}`}</h2>
           <div className='question-nav'>
-            <Button animated className='btn' onClick={() => this.switchPost(-1)}>
+            <Button animated className={pre? 'btn' : 'disable'} onClick={() => this.switchPost(-1)}>
               <Button.Content visible>Prev</Button.Content>
               <Button.Content hidden><Icon name='left arrow' /></Button.Content>
             </Button>
@@ -68,7 +79,7 @@ class Quiz extends React.Component {
               <Button.Content visible>Home</Button.Content>
               <Button.Content hidden><Icon name='home' size='large'/></Button.Content>
             </Button>
-            <Button animated className='btn' onClick={() => this.switchPost(1)}>
+            <Button animated className={next? 'btn' : 'disable'} onClick={() => this.switchPost(1)}>
               <Button.Content visible>Next</Button.Content>
               <Button.Content hidden><Icon name='right arrow' /></Button.Content>
             </Button>

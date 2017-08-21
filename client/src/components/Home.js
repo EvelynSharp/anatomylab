@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import CalField from './CalField';
-import { Grid, Header } from 'semantic-ui-react';
+import { Grid } from 'semantic-ui-react';
 
 const Home = ({history}) => {
   const months = moment.months();

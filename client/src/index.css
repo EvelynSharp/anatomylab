@@ -56,9 +56,10 @@ body {
   color: white !important;
 }
 
-.question-nav .btn {
+.question-nav .btn, .question-nav .disable {
   margin: 0 0.5em 2em 0.5em !important;
 }
+
 
 .question h1 {
   font-size: 4em;

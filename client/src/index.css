@@ -51,11 +51,20 @@ body {
   font-size: 1.3em;
 }
 
+.question .btn {
+  background-color: #0f2e60 !important;
+  color: white !important;
+}
+
+.question-nav .btn {
+  margin: 0 0.5em 2em 0.5em !important;
+}
+
 .question h1 {
   font-size: 4em;
   text-align: center;
   color: #C82C20;
-  padding: 0.5% 0;
+  padding: 1% 0;
   border-bottom: 1px solid #ADADAD;
   background: #FFFFFF;
 }
@@ -63,8 +72,7 @@ body {
   font-size: 2em;
   text-align: center;
   color: #BE2216;
-  padding-top: 0.5%;
-  margin: 0;
+  padding: 0.5%;
 }
 
 .question h3 {

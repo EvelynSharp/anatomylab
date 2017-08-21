@@ -58,40 +58,29 @@ class Quiz extends React.Component {
   render(){
     let { genAnswer, intAnswer, advAnswer } = this.state;
     return (
-        <Container className='question'>
+        <div className='question'>
           <h1>Question of the week</h1>
+          <h2>{`Week: ${quizcontent[Number(this.props.match.params.id )].key}`}</h2>
           <div className='question-nav'>
-            <Button animated color='red'>
+            <Button animated className='btn'>
               <Button.Content visible>Prev</Button.Content>
-              <Button.Content hidden>
-                <Icon name='left arrow' />
-              </Button.Content>
+              <Button.Content hidden><Icon name='left arrow' /></Button.Content>
             </Button>
-
-            <div>
-              <h2>{quizcontent[Number(this.props.match.params.id )].key}</h2>
-              <Button
-                onClick={this.backHome}
-                color='red'
-                className='backHome'
-                animated
-                >
-                <Button.Content visible>Home</Button.Content>
-                <Button.Content hidden>
-                  <Icon name='home' size='large'/>
-                </Button.Content>
-              </Button>
-            </div>
-
-            <Button animated color='red'>
+            <Button
+              onClick={this.backHome}
+              className='backHome btn'
+              animated
+              >
+              <Button.Content visible>Home</Button.Content>
+              <Button.Content hidden><Icon name='home' size='large'/></Button.Content>
+            </Button>
+            <Button animated className='btn'>
               <Button.Content visible>Next</Button.Content>
-              <Button.Content hidden>
-                <Icon name='right arrow' />
-              </Button.Content>
+              <Button.Content hidden><Icon name='right arrow' /></Button.Content>
             </Button>
           </div>
 
-          <div className='question-body'>
+          <Container className='question-body'>
             <Grid columns={2} divided='vertically' centered>
               <Grid.Row>
                 <Grid.Column>
@@ -107,11 +96,11 @@ class Quiz extends React.Component {
                       <h2>General Knowledge</h2>
                       <h3>{quizcontent[Number(this.props.match.params.id )].genKnowledge}</h3>
                       {this.showGenAnswer()}
-                      <Button color={'red'} onClick={this.toggleGenAnswer}>
+                      <Button className='btn' onClick={this.toggleGenAnswer}>
                         {genAnswer?
                           <div>Hide Answer</div>
                           :
-                          <div>See Answer</div>
+                          <div>Show Answer</div>
                         }
                       </Button>
                     </Card>
@@ -119,11 +108,11 @@ class Quiz extends React.Component {
                       <h2>Intermediate Knowledge</h2>
                       <h3>{quizcontent[Number(this.props.match.params.id )].intKnowledge}</h3>
                       {this.showIntAnswer()}
-                      <Button color={'red'}onClick={this.toggleIntAnswer}>
+                      <Button className='btn' onClick={this.toggleIntAnswer}>
                         {intAnswer?
                           <div>Hide Answer</div>
                           :
-                          <div>See Answer</div>
+                          <div>Show Answer</div>
                         }
                       </Button>
                     </Card>
@@ -131,11 +120,11 @@ class Quiz extends React.Component {
                       <h2>Advanced Knowledge</h2>
                       <h3>{quizcontent[Number(this.props.match.params.id )].advKnowledge}</h3>
                       {this.showAdvAnswer()}
-                      <Button color={'red'}onClick={this.toggleAdvAnswer}>
+                      <Button className='btn' onClick={this.toggleAdvAnswer}>
                         {advAnswer?
                           <div>Hide Answer</div>
                           :
-                          <div>See Answer</div>
+                          <div>Show Answer</div>
                         }
                       </Button>
                     </Card>
@@ -143,8 +132,8 @@ class Quiz extends React.Component {
                 </Grid.Column>
               </Grid.Row>
             </Grid>
-          </div>
-        </Container>
+          </Container>
+        </div>
     )
   }
 }

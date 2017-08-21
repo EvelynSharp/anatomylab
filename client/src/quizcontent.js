@@ -429,7 +429,7 @@ export const quizcontent = [
     intAnswer: "intAnswer",
     advKnowledge: "adv Question",
     advAnswer: "intAnswer",
-    enable: true
+    enable: false
   },
   {
     key: '40',
@@ -440,6 +440,6 @@ export const quizcontent = [
     intAnswer: "intAnswer",
     advKnowledge: "adv Question",
     advAnswer: "intAnswer",
-    enable: false
+    enable: true
   },
 ]

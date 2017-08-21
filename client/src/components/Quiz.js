@@ -56,6 +56,7 @@ class Quiz extends React.Component {
   }
 
   render(){
+    let { genAnswer, intAnswer, advAnswer } = this.state;
     return (
         <Container className='question'>
           <h1>Question of the week</h1>
@@ -106,19 +107,37 @@ class Quiz extends React.Component {
                       <h2>General Knowledge</h2>
                       <h3>{quizcontent[Number(this.props.match.params.id )].genKnowledge}</h3>
                       {this.showGenAnswer()}
-                      <Button color={'red'} onClick={this.toggleGenAnswer}>See Answer</Button>
+                      <Button color={'red'} onClick={this.toggleGenAnswer}>
+                        {genAnswer?
+                          <div>Hide Answer</div>
+                          :
+                          <div>See Answer</div>
+                        }
+                      </Button>
                     </Card>
                     <Card>
                       <h2>Intermediate Knowledge</h2>
                       <h3>{quizcontent[Number(this.props.match.params.id )].intKnowledge}</h3>
                       {this.showIntAnswer()}
-                      <Button color={'red'}onClick={this.toggleIntAnswer}>See Answer</Button>
+                      <Button color={'red'}onClick={this.toggleIntAnswer}>
+                        {intAnswer?
+                          <div>Hide Answer</div>
+                          :
+                          <div>See Answer</div>
+                        }
+                      </Button>
                     </Card>
                     <Card>
                       <h2>Advanced Knowledge</h2>
                       <h3>{quizcontent[Number(this.props.match.params.id )].advKnowledge}</h3>
                       {this.showAdvAnswer()}
-                      <Button color={'red'}onClick={this.toggleAdvAnswer}>See Answer</Button>
+                      <Button color={'red'}onClick={this.toggleAdvAnswer}>
+                        {advAnswer?
+                          <div>Hide Answer</div>
+                          :
+                          <div>See Answer</div>
+                        }
+                      </Button>
                     </Card>
                   </Card.Group>
                 </Grid.Column>

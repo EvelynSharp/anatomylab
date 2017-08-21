@@ -3,7 +3,7 @@ import quiz2img from './images/quiz2img.jpg';
 
 export const quizcontent = [
   {
-    key: '01',
+    key: 1,
     imagesrc: quiz1img,
     genKnowledge: "What side of the body is this bone from?",
     genAnswer: "genAnswer",
@@ -14,7 +14,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '02',
+    key: 2,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -25,7 +25,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '03',
+    key: 3,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -36,7 +36,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '04',
+    key: 4,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -47,7 +47,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '05',
+    key: 5,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -58,7 +58,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '06',
+    key: 6,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -69,7 +69,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '07',
+    key: 7,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -80,7 +80,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '08',
+    key: 8,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -91,7 +91,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '09',
+    key: 9,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -102,7 +102,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '10',
+    key: 10,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -113,7 +113,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '11',
+    key: 11,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -124,7 +124,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '12',
+    key: 12,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -135,7 +135,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '13',
+    key: 13,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -146,7 +146,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '14',
+    key: 14,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -157,7 +157,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '15',
+    key: 15,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -168,7 +168,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '16',
+    key: 16,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -179,7 +179,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '17',
+    key: 17,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -190,7 +190,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '18',
+    key: 18,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -201,7 +201,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '19',
+    key: 19,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -212,7 +212,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '20',
+    key: 20,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -223,7 +223,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '21',
+    key: 21,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -234,7 +234,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '22',
+    key: 22,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -245,7 +245,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '23',
+    key: 23,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -256,7 +256,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '24',
+    key: 24,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -267,7 +267,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '25',
+    key: 25,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -278,7 +278,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '26',
+    key: 26,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -289,7 +289,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '27',
+    key: 27,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -300,7 +300,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '28',
+    key: 28,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -311,7 +311,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '29',
+    key: 29,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -322,7 +322,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '30',
+    key: 30,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -333,7 +333,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '31',
+    key: 31,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -344,7 +344,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '32',
+    key: 32,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -355,7 +355,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '33',
+    key: 33,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -366,7 +366,29 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '34',
+    key: 34,
+    imagesrc: quiz2img,
+    genKnowledge: "gen Question34",
+    genAnswer: "genAnswer34",
+    intKnowledge: "int Question34",
+    intAnswer: "intAnswer34",
+    advKnowledge: "adv Question34",
+    advAnswer: "intAnswer34",
+    enable: true
+  },
+  {
+    key: 35,
+    imagesrc: quiz2img,
+    genKnowledge: "gen Question35",
+    genAnswer: "genAnswer",
+    intKnowledge: "int Question35",
+    intAnswer: "intAnswer",
+    advKnowledge: "adv Question35",
+    advAnswer: "intAnswer",
+    enable: true
+  },
+  {
+    key: 36,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -377,7 +399,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '35',
+    key: 37,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -388,7 +410,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '36',
+    key: 38,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -399,29 +421,7 @@ export const quizcontent = [
     enable: true
   },
   {
-    key: '37',
-    imagesrc: quiz2img,
-    genKnowledge: "gen Question",
-    genAnswer: "genAnswer",
-    intKnowledge: "int Question",
-    intAnswer: "intAnswer",
-    advKnowledge: "adv Question",
-    advAnswer: "intAnswer",
-    enable: true
-  },
-  {
-    key: '38',
-    imagesrc: quiz2img,
-    genKnowledge: "gen Question",
-    genAnswer: "genAnswer",
-    intKnowledge: "int Question",
-    intAnswer: "intAnswer",
-    advKnowledge: "adv Question",
-    advAnswer: "intAnswer",
-    enable: true
-  },
-  {
-    key: '39',
+    key: 39,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",
@@ -432,7 +432,7 @@ export const quizcontent = [
     enable: false
   },
   {
-    key: '40',
+    key: 40,
     imagesrc: quiz2img,
     genKnowledge: "gen Question",
     genAnswer: "genAnswer",

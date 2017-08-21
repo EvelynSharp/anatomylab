@@ -33,7 +33,7 @@ const CalField = ({ history, month, year }) => {
 
   const handleClick = (history, ifView, week) => {
     if (ifView) {
-      history.push(`/${week}`)
+      history.push(`/${Number(week)}`)
     }
   }
   return (

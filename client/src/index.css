@@ -75,11 +75,15 @@ body {
   padding: 0.5%;
 }
 
-.question h3 {
+.question h5, .question h3 {
   font-size: 1.5em;
   text-align: center;
   color: black;
   padding: 0.25%;
+}
+
+.question h5 {
+  font-size: 1em;
 }
 
 .question-nav {

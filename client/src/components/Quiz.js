@@ -6,48 +6,18 @@ class Quiz extends React.Component {
 
   state = { genAnswer: false, intAnswer: false, advAnswer: false }
 
-  toggleGenAnswer = (e) => {
-    this.setState({ genAnswer: !this.state.genAnswer})
+  componentWillMount = () => {
+
   }
 
-  toggleIntAnswer = (e) => {
-    this.setState({ intAnswer: !this.state.intAnswer})
+  toggleAnswer = (type) => {
+    this.setState({ [type]: !this.state[type]})
   }
 
-  toggleAdvAnswer = (e) => {
-    this.setState({ advAnswer: !this.state.advAnswer})
-  }
-
-  showGenAnswer(e) {
-    if(this.state.genAnswer)
+  displayAnswer = (type) => {
+    let quiz = quizcontent[this.props.match.params.id - 1]
     return (
-      <h3 style={{color: 'green'}}>{quizcontent[Number(this.props.match.params.id )-1].genAnswer}</h3>
-    )
-    else
-    return(
-      <h3 style={{visibility: 'hidden'}}>{quizcontent[Number(this.props.match.params.id )-1].genAnswer}</h3>
-    )
-  }
-
-  showIntAnswer(e) {
-    if(this.state.intAnswer)
-    return (
-      <h3 style={{color: 'green'}}>{quizcontent[Number(this.props.match.params.id )-1].intAnswer}</h3>
-    )
-    else
-    return(
-      <h3 style={{visibility: 'hidden'}}>{quizcontent[Number(this.props.match.params.id )-1].intAnswer}</h3>
-    )
-  }
-
-  showAdvAnswer(e) {
-    if(this.state.advAnswer)
-    return (
-      <h3 style={{color: 'green'}}>{quizcontent[Number(this.props.match.params.id )-1].advAnswer}</h3>
-    )
-    else
-    return(
-      <h3 style={{visibility: 'hidden'}}>{quizcontent[Number(this.props.match.params.id )-1].advAnswer}</h3>
+        <h5 style={this.state[type]? {color: 'green'} : {visibility: 'hidden', color: 'green'}} >{quiz[type]}</h5>
     )
   }
 
@@ -115,8 +85,8 @@ class Quiz extends React.Component {
                     <Card>
                       <h2>General Knowledge</h2>
                       <h3>{quizcontent[quizId].genKnowledge}</h3>
-                      {this.showGenAnswer()}
-                      <Button className='btn' onClick={this.toggleGenAnswer}>
+                      {this.displayAnswer('genAnswer')}
+                      <Button className='btn' onClick={() => this.toggleAnswer('genAnswer')}>
                         {genAnswer?
                           <div>Hide Answer</div>
                           :
@@ -127,8 +97,8 @@ class Quiz extends React.Component {
                     <Card>
                       <h2>Intermediate Knowledge</h2>
                       <h3>{quizcontent[quizId].intKnowledge}</h3>
-                      {this.showIntAnswer()}
-                      <Button className='btn' onClick={this.toggleIntAnswer}>
+                      {this.displayAnswer('intAnswer')}
+                      <Button className='btn' onClick={() => this.toggleAnswer('intAnswer')}>
                         {intAnswer?
                           <div>Hide Answer</div>
                           :
@@ -139,8 +109,8 @@ class Quiz extends React.Component {
                     <Card>
                       <h2>Advanced Knowledge</h2>
                       <h3>{quizcontent[quizId].advKnowledge}</h3>
-                      {this.showAdvAnswer()}
-                      <Button className='btn' onClick={this.toggleAdvAnswer}>
+                      {this.displayAnswer('advAnswer')}
+                      <Button className='btn' onClick={() => this.toggleAnswer('advAnswer')}>
                         {advAnswer?
                           <div>Hide Answer</div>
                           :

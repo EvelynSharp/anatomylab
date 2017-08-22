@@ -1,4 +1,4 @@
-AnatomyLab Overview:
+```AnatomyLab Overview:
 This is a side project for the University of Utah department of Biology. The department was looking for a way to administer weekly quizzes to students of the Anatomy classes.  The previous quizzes were built using flash and we updated the web application to new JavaScript technologies that are fast, responsive and scalable. 
 
 Content Change Instructions for Professor:
@@ -12,7 +12,7 @@ Overview - This is a fully templated web application, meaning the quiz always lo
  
  2) Changing the Content:
  - As you can see from looking as the /quizcontent.js file, it contains numerous JSON objects with data needed for each week's quiz, such as General Q&A, Intermediate Q&A, Advanced Q&A and the image. Example of a JSON object below. 
-   {
+  {
     key: 1,
     imagesrc: title-of-image,
     genKnowledge: "What side of the body is this bone from?",
@@ -24,4 +24,4 @@ Overview - This is a fully templated web application, meaning the quiz always lo
     enable: true
   },
  - To use the image youve just imported, simply pair it with the imagesrc key and refer to it by the title you chose for the image. title-of-image. See example above for exact usage. 
- - To change the quiz questions and answers, simply edit the specific JSON object pairs accordingly. 
+ - To change the quiz questions and answers, simply edit the specific JSON object pairs accordingly. ```
